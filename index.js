@@ -370,7 +370,7 @@ class SafeView extends Component {
   };
 }
 
-export function getInset(key, isLandscape) {
+function getInset(key, isLandscape) {
   switch (key) {
     case 'horizontal':
     case 'right':
@@ -403,7 +403,7 @@ const SafeAreaView = withOrientation(SafeView);
 
 export default SafeAreaView;
 
-export const withSafeArea = function(forceInset = {}) {
+const withSafeArea = function(forceInset = {}) {
   return WrappedComponent => {
     class withSafeArea extends Component {
       render() {
